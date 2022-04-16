@@ -312,6 +312,10 @@ header .wrap h1 img{
     background-color: transparent;
     border: 0;
     cursor: pointer;
+    width: 34px;
+    height: 34px
+px
+;
 }
 .abnormality-wrap .wrap>button span{
     color: #fff;
@@ -397,4 +401,74 @@ header .wrap h1 img{
 }
 .abnormality-wrap .wrap ul li .info-4 span:nth-child(2){
     margin-left: 5px;
+}
+
+/* 600 ~ 900 */
+@media screen and (max-width:900px) {
+    body{
+        font-size: 18px;
+    }
+    .option-wrap .wrap h1{
+        line-height: 1.7;
+    }
+    .option-wrap .wrap .tag_reset{
+        position: absolute;
+        top: -10px;left: 490px;
+        width: 40px;
+    }
+    
+    .statResult-wrap .wrap h1{
+        line-height: 1.7;
+    }
+    .statResult-wrap .wrap{
+        flex-direction: column;
+    }
+
+    .statResult-wrap .wrap .calc-wrap{
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .statResult-wrap .wrap .res-wrap{
+        border-bottom: 3px solid #fffea2;
+        border-top: 4px solid #fffea2;
+        border-left: 5px solid #fffea2;
+        border-right: 2px solid #fffea2;
+    }
+
+    .abnormality-wrap{
+        margin-top: 80px;
+    }
+    .abnormality-wrap .wrap h1{
+        line-height: 1.7;
+    }
+    .abnormality-wrap .wrap .gift_reset{
+        top: -19px;
+        left: 440px;
+    }
+
+    .abnormality-wrap .wrap p:nth-child(4){
+        top: -65px;
+        left: 20px;
+    }
+    .abnormality-wrap .wrap>input{
+        top: -65px;
+        left: 170px;
+    }
+    .abnormality-wrap .wrap>button{
+        top: -67px;
+        left: 305px;
+    }
+    .statResult-wrap .wrap .res-wrap ul li div.res_st_c{
+        width: 30px;
+    }
+
+}
+/* 480 ~ 600 */
+@media screen and (min-width:480px) and (max-width:600px) {
+    
+}
+/* ~~ 480 */
+@media screen and (max-width:480px) {
+    
 }
