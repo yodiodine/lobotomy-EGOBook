@@ -1,0 +1,400 @@
+@import url('https://fonts.googleapis.com/css2?family=Do+Hyeon&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400&display=swap');
+/* reset */
+*{
+    margin: 0; padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+    vertical-align: middle;
+    user-select: none;
+}
+body{
+    font-family: 'Do Hyeon', sans-serif;
+    font-size: 20px;
+    background-color: #000;
+    color: #dfdfdf;
+}
+a{ text-decoration: none; }
+.clearfix::before,.clearfix::after{
+    content: '';
+    display: block;
+    clear: both;
+}
+
+
+/* ----- */
+.bg1{
+    position: absolute;
+    top:0;left: 0;
+    z-index: -2;
+    width: 200px;
+    border-top: 10vw solid #fffea2;
+    border-right: 80vw solid transparent;
+    border-bottom: 50vw solid transparent;
+    border-left: 0vw solid #fffea2;
+}
+
+.wrap{
+    margin: 40px auto;
+    padding: 20px;
+    max-width: 1000px;
+}
+
+
+header{}
+header .wrap{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+header .wrap h1{
+    width: 250px;
+    text-align: center;font-size: 40px;
+    background-color: #000;
+}
+header .wrap h1 img{
+    width: 100%;
+}
+
+/* 옵션 모아보기 */
+.option-wrap{}
+.option-wrap .wrap{
+    position: relative;
+}
+.option-wrap .wrap h1{
+    position: absolute;
+    top: -15px;
+    width: 180px; line-height: 1.5;
+    background-color: #fffea2;
+    text-align: center;
+    color: #000;
+}
+.option-wrap .wrap>p:nth-child(2){
+    position: absolute;
+    top: -10px;left: 240px;
+}
+.option-wrap .wrap .tag_reset{
+    position: absolute;
+    top: -7px;left: 520px;
+    width: 40px;
+    background-color: #fffea2;
+    
+    display: flex;
+    justify-content: center;align-items: center;
+    color: #000;
+    cursor: pointer;
+}
+.option-wrap .wrap .tag_reset:hover{
+    transform: scale(1.1);
+}
+.option-wrap .wrap .tag_reset:hover span{
+    transform: rotate(45deg);
+    transition: .1s;
+}
+.option-wrap .wrap .tag_reset:active{
+    transform: scale(0.95);
+}
+.option-wrap .wrap .tag_reset:active span{
+    transform: rotate(70deg);
+    transition: .1s;
+}
+.option-wrap .wrap .pos-list{
+    display: flex; align-items: center;
+    margin: 10px 0;
+    border-bottom: 3px solid #fffea2;
+    border-top: 4px solid #fffea2;
+    border-left: 5px solid #fffea2;
+    border-right: 2px solid #fffea2;
+    background-color: #000;
+
+}
+.option-wrap .wrap .pos-list span{ display:block;width: 100px; text-align: center; }
+.option-wrap .wrap .pos-list ul{
+    padding: 10px 0;
+}
+.option-wrap .wrap .pos-list ul li{
+    float: left;
+    padding: 5px 15px; margin: 5px 10px;
+    background-color: rgba(255,255,255,.3);
+    color: #000;
+    cursor: pointer;
+    line-height: 1.2;
+}
+.option-wrap .wrap .pos-list ul li:hover{
+    transition: .1s;
+    background-color: rgba(255,255,255,.4);
+}
+.option-wrap .wrap .pos-list ul li:active{
+    transition: .1s;
+    transform: scale(0.9) rotate(-5deg);
+}
+.option-wrap .wrap .pos-list ul li.clicked{
+    background-color: rgba(255,255,255,.7);
+}
+
+
+.option-wrap .wrap .stat-list{
+    display: flex; align-items: center;
+    margin: 10px 0;
+    border-bottom: 3px solid #fffea2;
+    border-top: 4px solid #fffea2;
+    border-left: 5px solid #fffea2;
+    border-right: 2px solid #fffea2;
+    background-color: #000;
+}
+.option-wrap .wrap .stat-list span{ display:block;width: 100px; text-align: center; }
+.option-wrap .wrap .stat-list ul{
+    padding: 10px 0;
+}
+.option-wrap .wrap .stat-list ul li{
+    float: left;
+    padding: 5px 15px; margin: 5px 10px;
+    background-color: rgba(255,255,255,.3);
+    color: #000;
+    cursor: pointer;
+    line-height: 1.2;
+}
+.option-wrap .wrap .stat-list ul li:hover{
+    transition: .1s;
+    background-color: rgba(255,255,255,.4);
+}
+.option-wrap .wrap .stat-list ul li:active{
+    transition: .1s;
+    transform: scale(0.9) rotate(-5deg);
+}
+.option-wrap .wrap .stat-list ul li.clicked{
+    background-color: rgba(255,255,255,.7);
+}
+
+
+/* 계산결과 */
+.statResult-wrap{}
+.statResult-wrap .wrap{
+    display: flex;
+    position: relative;
+}
+.statResult-wrap .wrap h1{
+    position: absolute;
+    top: -22px;
+    width: 180px; line-height: 1.5;
+    background-color: #fffea2;
+    text-align: center;
+    color: #000;
+}
+.statResult-wrap .wrap .calc-wrap{
+    flex:4;
+    margin-right: 10px;
+    
+    border-bottom: 3px solid #fffea2;
+    border-top: 4px solid #fffea2;
+    border-left: 5px solid #fffea2;
+    border-right: 2px solid #fffea2;
+}
+.statResult-wrap .wrap .calc-wrap ul{padding: 10px;}
+.statResult-wrap .wrap .calc-wrap ul li{
+    display: flex;
+    align-items: flex-start;
+    margin: 15px;
+}
+.statResult-wrap .wrap .calc-wrap ul li div.calc_st_t{
+    width: 100px;
+    text-align: center;
+
+    border-top: 1px solid #fd393b;
+    border-left: 1px solid #fd393b;
+    border-right: 2px solid #fd393b;
+    border-bottom: 2px solid #fd393b;
+}
+.statResult-wrap .wrap .calc-wrap ul li div.calc_st_c{
+    margin-left: 10px;
+    width: 80%;
+}
+.statResult-wrap .wrap .calc-wrap ul li div.calc_st_c div{
+    float: left;
+    margin: 0 7px;
+}
+
+
+
+.statResult-wrap .wrap .res-wrap{
+    border-bottom: 3px solid #fffea2;
+    border-top: 4px solid #fffea2;
+    border-left: 5px solid #fffea2;
+    border-right: 2px solid #fffea2;
+}
+.statResult-wrap .wrap .res-wrap ul{padding: 10px;}
+.statResult-wrap .wrap .res-wrap ul li{
+    display: flex;
+    align-items: flex-start;
+    margin: 15px;
+}
+.statResult-wrap .wrap .res-wrap ul li div.res_st_t{
+    width: 100px;
+    text-align: center;
+
+    border-top: 1px solid #fd393b;
+    border-left: 1px solid #fd393b;
+    border-right: 2px solid #fd393b;
+    border-bottom: 2px solid #fd393b;
+}
+.statResult-wrap .wrap .res-wrap ul li div.res_st_c{
+    margin-left: 10px;
+    width: 100px;text-align: center;
+}
+.statResult-wrap .wrap .res-wrap ul li div span{}
+
+
+
+
+
+
+/* 기프트 리스트 왜 환상체리스트라고 이름 지었지? */
+.abnormality-wrap{
+    position: relative;
+}
+.abnormality-wrap .wrap{
+    position: relative;
+}
+.abnormality-wrap .wrap h1{
+    position: absolute;
+    top: -22px;
+    width: 180px; line-height: 1.5;
+    background-color: #fffea2;
+    text-align: center;
+    color: #000;
+}
+.abnormality-wrap .wrap>p:nth-child(2){
+    position: absolute;
+    top: -20px;left: 220px;
+}
+.abnormality-wrap .wrap .gift_reset{
+    position: absolute;
+    top: -17px;left: 460px;
+    width: 40px;
+    background-color: #fffea2;
+    
+    display: flex;
+    justify-content: center;align-items: center;
+    color: #000;
+    cursor: pointer;
+}
+.abnormality-wrap .wrap .gift_reset:hover{
+    transform: scale(1.1);
+}
+.abnormality-wrap .wrap .gift_reset:hover span{
+    transform: rotate(45deg);
+    transition: .1s;
+}
+.abnormality-wrap .wrap .gift_reset:active{
+    transform: scale(0.95);
+}
+.abnormality-wrap .wrap .gift_reset:active span{
+    transform: rotate(70deg);
+    transition: .1s;
+}
+.abnormality-wrap .wrap p:nth-child(4){
+    position: absolute;
+    top: -20px;right: 200px;
+}
+.abnormality-wrap .wrap>input{
+    position: absolute;
+    top: -20px;right: 60px;
+    height: 30px;width: 130px;
+    background-color: transparent;
+    color: #fefefe;
+    border: 0;
+    border-bottom: 2px solid #fff;
+    text-indent: 5px;
+}
+.abnormality-wrap .wrap>button{
+    position: absolute;
+    top: -22px;right: 20px;
+    background-color: transparent;
+    border: 0;
+    cursor: pointer;
+}
+.abnormality-wrap .wrap>button span{
+    color: #fff;
+    padding: 5px;
+    border-radius: 10px;
+}
+.abnormality-wrap .wrap>button:hover span{
+    transition: .2s;
+    background-color: #ffffff2a
+}
+
+
+
+.abnormality-wrap .wrap ul{
+    border-bottom: 3px solid #fffea2;
+    border-top: 4px solid #fffea2;
+    border-left: 5px solid #fffea2;
+    border-right: 2px solid #fffea2;
+    padding: 10px;
+}
+.abnormality-wrap .wrap ul li{
+    margin: 10px;
+    float: left;
+    padding: 10px 15px;
+    font-size: 14px;
+    font-family: 'Noto Sans KR', sans-serif !important;
+}
+.abnormality-wrap .wrap ul li input{
+    display: none;
+}
+.abnormality-wrap .wrap ul li input[type="checkbox"]+label{
+    display: inline-block;
+    width: 20px;height: 20px;
+    border: 2px solid #fff;
+    transition: .1s;
+    cursor: pointer;
+    margin-bottom: 10px;
+}
+.abnormality-wrap .wrap ul li input[type="checkbox"]:checked+label{
+    display: inline-block;
+    width: 20px;height: 20px;
+    background-color: #fd393b;
+    position: relative;
+}
+.abnormality-wrap .wrap ul li input[type="checkbox"]:checked+label div:nth-child(1){
+    position: absolute; top:8.5px;left: 3px;
+    width: 5px;height: 2px;
+    background-color: #fff;
+    border-radius: 20px;
+
+    transform: rotate(45deg);
+    transition: .2s;
+}
+.abnormality-wrap .wrap ul li input[type="checkbox"]:checked+label div:nth-child(2){
+    position: absolute; top:7.5px; right: 1px;
+    width: 10px;height: 2px;
+    background-color: #fff;
+    border-radius: 20px;
+
+    transform: rotate(-45deg);
+    transition: .2s;
+}
+
+.abnormality-wrap .wrap ul li .info-1{
+}
+.abnormality-wrap .wrap ul li .info-1 .gift{
+    font-weight: bold;
+    font-size: 16px;
+}
+
+.abnormality-wrap .wrap ul li .info-3{
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+.abnormality-wrap .wrap ul li .info-4{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 5px;
+}
+.abnormality-wrap .wrap ul li .info-4 span:nth-child(1){
+    margin-right: 5px;
+}
+.abnormality-wrap .wrap ul li .info-4 span:nth-child(2){
+    margin-left: 5px;
+}
